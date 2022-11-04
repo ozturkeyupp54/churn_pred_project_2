@@ -21,7 +21,7 @@ def st_display_sweetviz(report_html,width=1000,height=500):
 def explore_data(dataset):
         df = pd.read_csv(os.path.join(dataset))
         return df 
-
+st.set_page_config(layout="wide")
 # def cat_list(df):
 #     cat_list = ["departments", "salary"]
 #     index = 0
