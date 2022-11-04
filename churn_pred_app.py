@@ -153,7 +153,7 @@ def main():
 
             st.table(df)
 
-            if st.button("Predict"):
+            if st.button("Predict_Random"):
                 predictions = model.predict(df)
 
                 df["pred"] = predictions
@@ -230,7 +230,7 @@ def main():
             xg_model = pickle.load(open(xgboost, 'rb'))
             # scaled_random= pickle.load(open("random_pipeline","rb"))
 
-            st.sidebar.title("XGBOOST Model ")
+            st.sidebar.title("XGBOOST Model")
             # st.sidebar.header("Sidebar header")
             sl=st.sidebar.slider(label='satisfaction_level',min_value=0.0,max_value=1.0,step=0.01,)
             le=st.sidebar.slider(label="last_evaluation:",min_value=0.0,max_value=1.0,step=0.01,)
@@ -248,7 +248,7 @@ def main():
 
             st.table(df)
 
-            if st.button("Predict"):
+            if st.button("Predict_xg"):
                 predictions = xg_model.predict(df)
 
                 df_xg["pred"] = predictions
@@ -324,7 +324,7 @@ def main():
             # sample_scaled = scaled_ann.transform(df)
             # st.table(df)
 
-            if st.button("Predict"):
+            if st.button("Predict_ANN"):
                 predictions = model.predict(df)
 
                 df["pred"] = predictions
