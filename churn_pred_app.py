@@ -11,9 +11,7 @@ import os
 import matplotlib.pyplot as plt
 import pickle
 import seaborn as sns
-upload = file_uploader(...)
 
-data = upload.read()
 def st_display_sweetviz(report_html,width=1000,height=500):
         report_file = codecs.open(report_html,'r')
         page = report_file.read()
