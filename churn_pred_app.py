@@ -55,7 +55,7 @@ def main():
 
                 # Normal Workflow
                 report = sv.analyze([df, "original data"],target_feat='left')
-                report.show_html()
+                report.show_html(open_browser=True)
                 st_display_sweetviz("SWEETVIZ_REPORT.html")
 
 
