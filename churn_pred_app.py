@@ -11,6 +11,20 @@ import os
 import matplotlib.pyplot as plt
 import pickle
 import seaborn as sns
+import tensorflow as tf
+from keras import Model
+from keras.models import load_model
+
+
+
+import streamlit as st
+
+from tempfile import NamedTemporaryFile
+
+st.set_option('deprecation.showfileUploaderEncoding', False)
+
+buffer = st.file_uploader("Image here pl0x")
+temp_file = NamedTemporaryFile(delete=False)
 
 def st_display_sweetviz(report_html,width=1000,height=500):
         report_file = codecs.open(report_html,'r')
@@ -21,7 +35,7 @@ def st_display_sweetviz(report_html,width=1000,height=500):
 def explore_data(dataset):
         df = pd.read_csv(os.path.join(dataset))
         return df 
-st.set_page_config(layout="wide")
+# st.set_page_config(layout="wide")
 # def cat_list(df):
 #     cat_list = ["departments", "salary"]
 #     index = 0
@@ -33,7 +47,7 @@ st.set_page_config(layout="wide")
 def main():
     """A Simple EDA App with Streamlit Components"""
 
-    menu = ["EDA","Profile Report","Sweetviz",'Final Model',"K-Means",'KNN',"Random Forest Model","ANN Model"]
+    menu = ["EDA","Profile Report","Sweetviz",'Final Model',"K-Means",'KNN',"Random Forest Model","XGBClassifier","ANN Model"]
     choice = st.sidebar.selectbox("Menu",menu)
     if choice == "Profile Report":
             st.subheader("Automated EDA with Pandas Profile")
@@ -178,6 +192,70 @@ def main():
         if st.checkbox("Centroits of Clusters"):
                 st.image("image_36.PNG")
 
+    elif choice == "XGBClassifier":
+        st.write('# XGBClassifier')
+        st.write('# Vanilla Model')
+        # st.image('image_28.PNG')
+       
+        # if st.checkbox("Hopkins Score"):
+        #         st.write("0.14908358236837996")
+
+        if st.checkbox("Vanilla Result"):
+                st.image("image_59.PNG")
+
+        if st.checkbox("XGBoost Cross Validation"):
+                st.image("image61.PNG")
+
+        if st.checkbox("XGBoost Gridsearch"):
+                st.image("image_63.PNG")
+
+        if st.checkbox("Gridsearch Result"):
+                st.image("image_62.PNG")
+
+        if st.checkbox("AUC"):
+                st.image("image_64.PNG")
+                
+        if st.checkbox("Grid Search Feature Importance"):
+                st.image("image_65.PNG")
+                
+        if st.checkbox("New X_train"):
+                st.image("image_66.PNG")
+                
+        if st.checkbox("New Result"):
+                st.image("image_67.PNG")
+                
+
+        if st.checkbox("Final Prediction for XGBoost"):
+            filename = 'xgboost_pipe_pkl'
+            model = pickle.load(open(filename, 'rb'))
+            # scaled_random= pickle.load(open("random_pipeline","rb"))
+
+            st.sidebar.title("XGBOOST Model ")
+            # st.sidebar.header("Sidebar header")
+            sl=st.sidebar.slider(label='satisfaction_level',min_value=0.0,max_value=1.0,step=0.01,)
+            le=st.sidebar.slider(label="last_evaluation:",min_value=0.0,max_value=1.0,step=0.01,)
+            nump=st.sidebar.slider("number_project:",min_value=1,max_value=10,step=1,)
+            amh=st.sidebar.slider("average_monthly_hours:",min_value=0,max_value=320,step=1,)
+            tsc=st.sidebar.slider("time_spend_company:",min_value=0,max_value=12,step=1,)
+
+            dict={"satisfaction_level":sl,
+                "last_evaluation":le,
+                "number_project":nump,
+                "average_montly_hours":amh,
+                "time_spend_company":tsc}
+
+            df= pd.DataFrame.from_dict([dict])
+
+            st.table(df)
+
+            if st.button("Predict"):
+                predictions = model.predict(df)
+
+                df["pred"] = predictions
+
+                st.write(predictions[0])
+
+
     elif choice == "KNN":
         st.write('# K-MEANS')
         st.image('image_1.PNG')
@@ -206,7 +284,52 @@ def main():
 
         if st.checkbox("ANN Confuion Matrix and Classification Report "):
  
-                st.image("ann_f1_score1.PNG")
+                st.image("image_56.PNG")
+
+
+        if st.checkbox("Final Prediction for ANN"):
+            filename = 'model_churn'
+            model = load_model(filename)
+            
+
+            st.sidebar.title("ANN Model ")
+            # st.sidebar.header("Sidebar header")
+            
+            sl=st.sidebar.slider(label='satisfaction_level',min_value=0.0,max_value=1.0,step=0.01,)
+            
+            le=st.sidebar.slider(label="last_evaluation:",min_value=0.0,max_value=1.0,step=0.01,)
+            
+            nump=st.sidebar.slider("number_project:",min_value=1,max_value=10,step=1,)
+            
+            amh=st.sidebar.slider("average_monthly_hours:",min_value=0,max_value=320,step=1,)
+            
+            tsc=st.sidebar.slider("time_spend_company:",min_value=0,max_value=12,step=1,)
+            
+            slry=st.sidebar.slider("salary:",min_value=0,max_value=2,step=1,)
+            
+            wa=st.sidebar.slider("Work_accident:",min_value=0,max_value=1,step=1,)
+            
+            plS=st.sidebar.slider("promotion_last_5years:",min_value=0,max_value=1,step=1,)
+
+            dict={"satisfaction_level":sl,
+                "last_evaluation":le,
+                "number_project":nump,
+                "average_montly_hours":amh,
+                "time_spend_company":tsc,
+                "salary":slry,
+                "Work_accident":wa,
+                "promotion_last_5years":plS}
+
+            df= pd.DataFrame.from_dict([dict])
+            # sample_scaled = scaled_ann.transform(df)
+            # st.table(df)
+
+            if st.button("Predict"):
+                predictions = model.predict(df)
+
+                df["pred"] = predictions
+
+                st.write(predictions[0])
 
 
 
@@ -269,6 +392,9 @@ def main():
                 st.image("image_5.PNG")
 
             if st.checkbox("barh_plot"):
+                # name= "image_6.PNG"
+                # temp_file.write(buffer.getvalue())
+                # st.write(load_img(temp_file.name))
                 st.image("image_6.PNG")
 
 
@@ -336,9 +462,6 @@ def main():
 
 if __name__ == '__main__':
         main()
-
-
-
 
 
 
