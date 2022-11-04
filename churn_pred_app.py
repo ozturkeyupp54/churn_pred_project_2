@@ -226,8 +226,8 @@ def main():
                 
 
         if st.checkbox("Final Prediction for XGBoost"):
-            filename = 'xgboost_pipe_pkl'
-            model = pickle.load(open(filename, 'rb'))
+            xgboost = 'xgboost_pipe_pkl'
+            xg_model = pickle.load(open(xgboost, 'rb'))
             # scaled_random= pickle.load(open("random_pipeline","rb"))
 
             st.sidebar.title("XGBOOST Model ")
@@ -244,14 +244,14 @@ def main():
                 "average_montly_hours":amh,
                 "time_spend_company":tsc}
 
-            df= pd.DataFrame.from_dict([dict])
+            df_xg= pd.DataFrame.from_dict([dict])
 
             st.table(df)
 
             if st.button("Predict"):
-                predictions = model.predict(df)
+                predictions = xg_model.predict(df)
 
-                df["pred"] = predictions
+                df_xg["pred"] = predictions
 
                 st.write(predictions[0])
 
