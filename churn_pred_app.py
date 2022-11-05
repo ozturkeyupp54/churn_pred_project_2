@@ -47,7 +47,7 @@ def explore_data(dataset):
 def main():
     """A Simple EDA App with Streamlit Components"""
 
-    menu = ["EDA","Profile Report","Sweetviz",'Final Model',"K-Means",'KNN',"Random Forest Model","XGBClassifier","ANN Model"]
+    menu = ["EDA","Profile Report","Sweetviz","K-Means",'KNN',"Random Forest Model","XGBClassifier","ANN Model"]
     choice = st.sidebar.selectbox("Menu",menu)
     if choice == "Profile Report":
             st.subheader("Automated EDA with Pandas Profile")
@@ -195,10 +195,7 @@ def main():
     elif choice == "XGBClassifier":
         st.write('# XGBClassifier')
         st.write('# Vanilla Model')
-        # st.image('image_28.PNG')
-       
-        # if st.checkbox("Hopkins Score"):
-        #         st.write("0.14908358236837996")
+
 
         if st.checkbox("Vanilla Result"):
                 st.image("image_59.PNG")
@@ -246,10 +243,10 @@ def main():
 
             df_xg= pd.DataFrame.from_dict([dict])
 
-            st.table(df)
+            st.table(df_xg)
 
             if st.button("Predict_xg"):
-                predictions = xg_model.predict(df)
+                predictions = xg_model.predict(df_xg)
 
                 df_xg["pred"] = predictions
 
