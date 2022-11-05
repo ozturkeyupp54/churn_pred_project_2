@@ -103,7 +103,8 @@ def main():
 
         if st.checkbox("RF Model Feature Importance"):
                 st.image('image_41.PNG')
-                st.image('image_42.PNG')
+                image42 = Image.open('image_42.png')
+                st.image(image42)
 
         if st.checkbox("Find Best Parameters"):
                 st.image('image_43.PNG')
