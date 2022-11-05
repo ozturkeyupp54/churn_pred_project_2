@@ -440,86 +440,108 @@ def main():
 
             # Show Summary of Dataset
             if st.checkbox("Show İnfo of Dataset"):
-                st.image("image_2.PNG")
-
+                image2 = Image.open('image_2.png')
+                st.image(image2)
+                
             if st.checkbox("Show Summary of Dataset"):
                 st.write(data.describe().T)
 
             if st.checkbox("Show mean all columns"):
-                st.image("image_3.PNG")
+                image3 = Image.open('image_3.png')
+                st.image(image3)
+                
 
             if st.checkbox("num_pro_val_count"):
-                st.image("image_4.PNG")
+                image4 = Image.open('image_4.png')
+                st.image(image4)
 
             if st.checkbox("time_spend_value_normalize"):
-                st.image("image_5.PNG")
+                image5 = Image.open('image_5.png')
+                st.image(image5)
 
             if st.checkbox("barh_plot"):
-#                 name= "image_6.PNG"
-#                 
-                
                 image6 = Image.open('image_6.png')
                 st.image(image6)
 
             if st.checkbox("histogram"):
-                st.image("image_7.PNG")
+                image7 = Image.open('image_7.png')
+                st.image(image7)
             
             if st.checkbox("cat plot"):
-                st.image("image_8.PNG")
+                image8 = Image.open('image_8.png')
+                st.image(image8)
             
             if st.checkbox("employees left"):
-                st.image("image_9.PNG")
+                image9 = Image.open('image_9.png')
+                st.image(image9)
             
             if st.checkbox("Number of Projects"):
-                st.image("image_10.PNG")
+                image10 = Image.open('image_10.png')
+                st.image(image10)
             
             if st.checkbox("Time Spent in Company"):
-                st.image("image_11.PNG")
+                image11 = Image.open('image_11.png')
+                st.image(image11)
 
             if st.checkbox("The number of projects and the number of lefts"):
-                st.image("image_12.PNG")
+                image12 = Image.open('image_12.png')
+                st.image(image12)
             
             if st.checkbox("Subplots time_spend_company and lefts"):
-                st.image("image_57.PNG")
+                image57 = Image.open('image_57.png')
+                st.image(image57)
             
             if st.checkbox("Value count and percentage of time spent company"):
-                st.image("image_14.PNG")
+                image14 = Image.open('image_14.png')
+                st.image(image14)
             
             if st.checkbox("number_project_left"):
-                st.image("image_15.PNG")
+                image15 = Image.open('image_15.png')
+                st.image(image15)
             
             if st.checkbox("satisfaction_level"):
-                st.image("image_16.PNG")
+                image16 = Image.open('image_16.png')
+                st.image(image16)
             
             if st.checkbox("average_montly_hours"):
-                st.image("image_17.PNG")
+                image17 = Image.open('image_17.png')
+                st.image(image17)
             
             if st.checkbox("Promotion last 5 years"):
-                st.image("image_18.PNG")
+                image18 = Image.open('image_18.png')
+                st.image(image18)
 
             if st.checkbox("Number of Lefts by Department"): # bunu da 
-                st.image("image_19.PNG")
+                image19 = Image.open('image_19.png')
+                st.image(image19)
             
             if st.checkbox("Percentage of Lefts by Department"):
-                st.image("image_20.PNG")
+                image20 = Image.open('image_20.png')
+                st.image(image20)
             
             if st.checkbox("Number of employees who left their jobs by salary status"):
-                st.image("image_21.PNG")
+                image21 = Image.open('image_21.png')
+                st.image(image21)
             
             if st.checkbox("Correlation table and heatmap"):
-                st.image("image_22.PNG")
+                image22 = Image.open('image_22.png')
+                st.image(image22)
 
             if st.checkbox("satisfaction_level_and_last_evaluation"):
-                st.image("image_23.PNG")
+                image23 = Image.open('image_23.png')
+                st.image(image23)
  
             if st.checkbox("satisfaction_level_and_average_monthly_hours"):
-                st.image("image_24.PNG")
+                image24 = Image.open('image_24.png')
+                st.image(image24)
  
             if st.checkbox("satisfaction_level_and_salary"):
-                st.image("image_25.PNG")
+                image25 = Image.open('image_25.png')
+                st.image(image25)
  
             if st.checkbox("satisfaction_level_and_promotion_last_5years"):
-                st.image("image_27.PNG")
+                image27 = Image.open('image_27.png')
+                st.image(image27)
 
           
 
