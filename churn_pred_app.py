@@ -455,8 +455,10 @@ def main():
                 st.image("image_5.PNG")
 
             if st.checkbox("barh_plot"):
-                 name= "image_6.PNG"
-                 st.image(name)
+#                 name= "image_6.PNG"
+#                 st.image(name)
+                
+                image6 = Image.open('image_6.png')
 
 
             if st.checkbox("histogram"):
