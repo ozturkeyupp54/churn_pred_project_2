@@ -456,10 +456,10 @@ def main():
 
             if st.checkbox("barh_plot"):
 #                 name= "image_6.PNG"
-#                 st.image(name)
+#                 
                 
                 image6 = Image.open('image_6.png')
-
+                st.image(image6)
 
             if st.checkbox("histogram"):
                 st.image("image_7.PNG")
