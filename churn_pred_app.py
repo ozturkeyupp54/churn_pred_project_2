@@ -454,8 +454,9 @@ def main():
                 
 
             if st.checkbox("num_pro_val_count"):
-                image4 = Image.open('image_4.png')
-                st.image(image4)
+#                 image4 = Image.open('image_4.png')
+#                 st.image(image4)
+                  st.image("image_4.PNG")
 
             if st.checkbox("time_spend_value_normalize"):
                 image5 = Image.open('image_5.png')
