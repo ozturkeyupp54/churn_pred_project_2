@@ -257,12 +257,78 @@ def main():
 
 
     elif choice == "KNN":
-        st.write('# K-MEANS')
-        st.image('image_1.PNG')
+        st.write('# KNN model building')
+        st.write('# Train test split yaptık.\n Ardından pipeline oluşturmak adına OneHotEncoder,OrdinalEncoder ve StandardScaler algoritmalarını kullandık')
+        st.image('image_68.PNG')
        
-        if st.checkbox("Hopkins Score"):
-                st.write("0.14908358236837996")
+        if st.checkbox("KNN vanilla eval metric"):
+                st.image("image_69.PNG")
+       
+        if st.checkbox("KNN elbow"):
+            st.write("30 komşuluğuktaki hata durumunu gösteriyor")
+            st.image("image_70.PNG")
+ 
+        if st.checkbox("KNN n_neighbors = 2"):
+            st.image("image_71.PNG")
+ 
+        if st.checkbox("KNN n_neighbors = 3"):
+            st.image("image_72.PNG")
+ 
+        if st.checkbox("KNN n_neighbors = 5"):
+            st.image("image_73.PNG")
+ 
+        if st.checkbox("KNN n_neighbors = 10"):
+            st.image("image_74.PNG")
+ 
+        if st.checkbox("KNN Cross_Validation"):
+            st.image("image_75.PNG")
+            st.image("image_76.PNG")
 
+
+        if st.checkbox("Final Prediction for KNN"):
+            KNN_m = 'knn_pipe_model'
+            KNN_model = pickle.load(open(KNN_m, 'rb'))
+            # scaled_random= pickle.load(open("random_pipeline","rb"))
+
+            st.sidebar.title("KNN Model ")
+            # st.sidebar.header("Sidebar header")
+            sl=st.sidebar.slider(label='satisfaction_level',min_value=0.0,max_value=1.0,step=0.01,)
+            le=st.sidebar.slider(label="last_evaluation:",min_value=0.0,max_value=1.0,step=0.01,)
+            nump=st.sidebar.slider("number_project:",min_value=1,max_value=10,step=1,)
+            amh=st.sidebar.slider("average_monthly_hours:",min_value=0,max_value=320,step=1,)
+            tsc=st.sidebar.slider("time_spend_company:",min_value=0,max_value=12,step=1,)
+
+            wa=st.sidebar.slider("work_accident:",min_value=0,max_value=1,step=1,)
+            
+            plS=st.sidebar.slider("promotion_last_5years:",min_value=0,max_value=1,step=1,)
+
+            dpr=st.sidebar.selectbox("Select a department", ['sales', 'accounting', 'hr', 'technical', 'support', 'management','IT', 'product_mng', 'marketing', 'RandD'])
+            
+            # slry=st.sidebar.slider("salary:",min_value=0,max_value=1,step=1,)
+            slry=st.sidebar.selectbox("Select a salary type",["low","medium","high"])
+
+
+            dict={"satisfaction_level":sl,
+                "last_evaluation":le,
+                "number_project":nump,
+                "average_montly_hours":amh,
+                "time_spend_company":tsc,
+                "work_accident":wa,
+
+                "promotion_last_5years":plS,
+                "departments":dpr,
+                "salary":slry}
+
+            df= pd.DataFrame.from_dict([dict])
+
+            st.table(df)
+
+            if st.button("Predict_KNN"):
+                predictions = KNN_model.predict(df)
+
+                df["pred"] = predictions
+
+                st.write(predictions[0])
 
 
     elif choice == "ANN Model":
