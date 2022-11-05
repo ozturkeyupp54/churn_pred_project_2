@@ -455,10 +455,10 @@ def main():
                 st.image("image_5.PNG")
 
             if st.checkbox("barh_plot"):
-                # name= "image_6.PNG"
-                # temp_file.write(buffer.getvalue())
-                # st.write(load_img(temp_file.name))
-                st.image("image_6.PNG")
+                 name= "image_6.PNG"
+                 temp_file.write(buffer.getvalue())
+                 st.write(load_img(temp_file.name))
+                #st.image("image_6.PNG")
 
 
             if st.checkbox("histogram"):
