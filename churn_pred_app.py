@@ -340,6 +340,129 @@ def main():
 
 
 
+#     else:
+#             st.subheader("EDA")
+#             st.write("## Zemin güzel, hava güzel, tahmin yürütmek için her şey müsait")
+
+#             # st.code("import pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nimport warnings\nfrom sklearn.metrics import classification_report\nconfusion_matrix\nfrom sklearn.metrics import roc_auc_score, roc_curve, precision_recall_curve, average_precision_score\nfrom sklearn.model_selection import cross_val_score, cross_validate\nfrom sklearn.model_selection import GridSearchCV")
+#             # st.code("import tensorflow as tf\nfrom keras.models import Sequential\nfrom keras.layers import Dense, Activation, Dropout\nfrom keras.callbacks import EarlyStopping\nfrom keras.optimizers import Adam")
+
+#             st.write("# HR - Employee Churn Prediction")
+#             st.image("image_1.jpg")
+#             st.write("# Dataframes")
+
+
+#             my_dataset = "profile_report.csv"
+#             # Load Our Dataset
+#             data = explore_data(my_dataset)
+
+#             # Show Dataset
+#             if st.checkbox("Preview DataFrame"):
+#                 if st.button("Head"):
+#                     st.write(data.head())
+#                 if st.button("Tail"):
+#                     st.write(data.tail())
+#                 else:
+#                     st.write(data.head(2))
+
+#             # Show Entire Dataframe
+#             if st.checkbox("Show All DataFrame"):
+#                 st.dataframe(data)
+
+#             # Show All Column Names
+#             if st.checkbox("Show All Column Name"):
+#                 st.text("Columns:")
+#                 st.write(data.columns)
+
+
+#             # Show Summary of Dataset
+#             if st.checkbox("Show İnfo of Dataset"):
+#                 st.image("image_2.PNG")
+
+#             if st.checkbox("Show Summary of Dataset"):
+#                 st.write(data.describe().T)
+
+#             if st.checkbox("Show mean all columns"):
+#                 st.image("image_3.PNG")
+
+#             if st.checkbox("num_pro_val_count"):
+#                 st.image("image_4.PNG")
+
+#             if st.checkbox("time_spend_value_normalize"):
+#                 st.image("image_5.PNG")
+
+#             if st.checkbox("barh_plot"):
+#                 # name= "image_6.PNG"
+#                 # temp_file.write(buffer.getvalue())
+#                 # st.write(load_img(temp_file.name))
+#                 st.image("image_6.PNG")
+
+
+#             if st.checkbox("histogram"):
+#                 st.image("image_7.PNG")
+            
+#             if st.checkbox("cat plot"):
+#                 st.image("image_8.PNG")
+            
+#             if st.checkbox("employees left"):
+#                 st.image("image_9.PNG")
+            
+#             if st.checkbox("Number of Projects"):
+#                 st.image("image_10.PNG")
+            
+#             if st.checkbox("Time Spent in Company"):
+#                 st.image("image_11.PNG")
+
+#             if st.checkbox("The number of projects and the number of lefts"):
+#                 st.image("image_12.PNG")
+            
+#             if st.checkbox("Subplots time_spend_company and lefts"):
+#                 st.image("image_57.PNG")
+            
+#             if st.checkbox("Value count and percentage of time spent company"):
+#                 st.image("image_14.PNG")
+            
+#             if st.checkbox("number_project_left"):
+#                 st.image("image_15.PNG")
+            
+#             if st.checkbox("satisfaction_level"):
+#                 st.image("image_16.PNG")
+            
+#             if st.checkbox("average_montly_hours"):
+#                 st.image("image_17.PNG")
+            
+#             if st.checkbox("Promotion last 5 years"):
+#                 st.image("image_18.PNG")
+
+#             if st.checkbox("Number of Lefts by Department"): # bunu da 
+#                 st.image("image_19.PNG")
+            
+#             if st.checkbox("Percentage of Lefts by Department"):
+#                 st.image("image_20.PNG")
+            
+#             if st.checkbox("Number of employees who left their jobs by salary status"):
+#                 st.image("image_21.PNG")
+            
+#             if st.checkbox("Correlation table and heatmap"):
+#                 st.image("image_22.PNG")
+
+#             if st.checkbox("satisfaction_level_and_last_evaluation"):
+#                 st.image("image_23.PNG")
+ 
+#             if st.checkbox("satisfaction_level_and_average_monthly_hours"):
+#                 st.image("image_24.PNG")
+ 
+#             if st.checkbox("satisfaction_level_and_salary"):
+#                 st.image("image_25.PNG")
+ 
+#             if st.checkbox("satisfaction_level_and_promotion_last_5years"):
+#                 st.image("image_27.PNG")
+
+          
+
+# if __name__ == '__main__':
+#         main()
+
     else:
             st.subheader("EDA")
             st.write("## Zemin güzel, hava güzel, tahmin yürütmek için her şey müsait")
@@ -391,71 +514,71 @@ def main():
             if st.checkbox("time_spend_value_normalize"):
                 st.image("image_5.PNG")
 
-            if st.checkbox("barh_plot"):
+            # if st.checkbox("barh_plot"):
                 # name= "image_6.PNG"
                 # temp_file.write(buffer.getvalue())
                 # st.write(load_img(temp_file.name))
                 st.image("image_6.PNG")
 
 
-            if st.checkbox("histogram"):
+            # if st.checkbox("histogram"):
                 st.image("image_7.PNG")
             
-            if st.checkbox("cat plot"):
+            # if st.checkbox("cat plot"):
                 st.image("image_8.PNG")
             
-            if st.checkbox("employees left"):
+            # if st.checkbox("employees left"):
                 st.image("image_9.PNG")
             
-            if st.checkbox("Number of Projects"):
+            # if st.checkbox("Number of Projects"):
                 st.image("image_10.PNG")
             
-            if st.checkbox("Time Spent in Company"):
+            # if st.checkbox("Time Spent in Company"):
                 st.image("image_11.PNG")
 
-            if st.checkbox("The number of projects and the number of lefts"):
+            # if st.checkbox("The number of projects and the number of lefts"):
                 st.image("image_12.PNG")
             
-            if st.checkbox("Subplots time_spend_company and lefts"):
+            # if st.checkbox("Subplots time_spend_company and lefts"):
                 st.image("image_57.PNG")
             
-            if st.checkbox("Value count and percentage of time spent company"):
+            # if st.checkbox("Value count and percentage of time spent company"):
                 st.image("image_14.PNG")
             
-            if st.checkbox("number_project_left"):
+            # if st.checkbox("number_project_left"):
                 st.image("image_15.PNG")
             
-            if st.checkbox("satisfaction_level"):
+            # if st.checkbox("satisfaction_level"):
                 st.image("image_16.PNG")
             
-            if st.checkbox("average_montly_hours"):
+            # if st.checkbox("average_montly_hours"):
                 st.image("image_17.PNG")
             
-            if st.checkbox("Promotion last 5 years"):
+            # if st.checkbox("Promotion last 5 years"):
                 st.image("image_18.PNG")
 
-            if st.checkbox("Number of Lefts by Department"): # bunu da 
+            # if st.checkbox("Number of Lefts by Department"): # bunu da 
                 st.image("image_19.PNG")
             
-            if st.checkbox("Percentage of Lefts by Department"):
+            # if st.checkbox("Percentage of Lefts by Department"):
                 st.image("image_20.PNG")
             
-            if st.checkbox("Number of employees who left their jobs by salary status"):
+            # if st.checkbox("Number of employees who left their jobs by salary status"):
                 st.image("image_21.PNG")
             
-            if st.checkbox("Correlation table and heatmap"):
+            # if st.checkbox("Correlation table and heatmap"):
                 st.image("image_22.PNG")
 
-            if st.checkbox("satisfaction_level_and_last_evaluation"):
+            # if st.checkbox("satisfaction_level_and_last_evaluation"):
                 st.image("image_23.PNG")
  
-            if st.checkbox("satisfaction_level_and_average_monthly_hours"):
+            # if st.checkbox("satisfaction_level_and_average_monthly_hours"):
                 st.image("image_24.PNG")
  
-            if st.checkbox("satisfaction_level_and_salary"):
+            # if st.checkbox("satisfaction_level_and_salary"):
                 st.image("image_25.PNG")
  
-            if st.checkbox("satisfaction_level_and_promotion_last_5years"):
+            # if st.checkbox("satisfaction_level_and_promotion_last_5years"):
                 st.image("image_27.PNG")
 
           
