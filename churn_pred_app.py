@@ -210,8 +210,7 @@ def main():
                 st.image("image_59.PNG")
 
         if st.checkbox("XGBoost Cross Validation"):
-#                 image61 = Image.open('image_61.png')
-#                 st.image(image61)
+
                   st.image("image_61.PNG")
 
         if st.checkbox("XGBoost Gridsearch"):
@@ -221,7 +220,8 @@ def main():
                 st.image("image_62.PNG")
 
         if st.checkbox("AUC"):
-                st.image("image_64.PNG")
+                image64 = Image.open('image_64.png')
+                st.image(image64)
                 
         if st.checkbox("Grid Search Feature Importance"):
                 st.image("image_65.PNG")
