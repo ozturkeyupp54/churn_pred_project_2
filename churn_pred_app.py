@@ -268,7 +268,8 @@ def main():
        
         if st.checkbox("KNN elbow"):
             st.write("30 komşuluğuktaki hata durumunu gösteriyor")
-            st.image("image_70.PNG")
+            image70 = Image.open('image_70.png')
+            st.image(image70)
  
         if st.checkbox("KNN n_neighbors = 2"):
             st.image("image_71.PNG")
