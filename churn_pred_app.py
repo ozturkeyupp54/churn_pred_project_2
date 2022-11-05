@@ -98,7 +98,8 @@ def main():
                 st.image('image_39.PNG')
 
         if st.checkbox("Evaluating ROC Curves and AUC"):
-                st.image('image_40.PNG')
+                image40 = Image.open('image_40.png')
+                st.image(image40)
 
         if st.checkbox("RF Model Feature Importance"):
                 st.image('image_41.PNG')
