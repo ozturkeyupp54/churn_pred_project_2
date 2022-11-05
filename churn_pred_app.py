@@ -183,7 +183,8 @@ def main():
                 st.image("image_32.PNG")
 
         if st.checkbox("silhouette_visualizer"):
-                st.image("image_33.PNG")
+                image33 = Image.open('image_33.png')
+                st.image(image33)
                 
         if st.checkbox("predicted_clusters"):
                 st.image("image_34.PNG")
