@@ -354,8 +354,11 @@ def main():
        
         if st.checkbox("Evaluating Model Performance and Tunning"):
      
-                st.image("image_54.PNG")
-                st.image("image_55.PNG")
+                image54 = Image.open('image_54.png')
+                st.image(image54)
+                image55 = Image.open('image_55.png')
+                st.image(image55)
+#                 st.image("image_55.PNG")
 
         if st.checkbox("ANN Confuion Matrix and Classification Report "):
  
