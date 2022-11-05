@@ -440,8 +440,9 @@ def main():
 
             # Show Summary of Dataset
             if st.checkbox("Show İnfo of Dataset"):
-                image2 = Image.open('image_2.png')
-                st.image(image2)
+#                 image2 = Image.open('image_2.png')
+#                 st.image(image2)
+                st.image("image_2.PNG")
                 
             if st.checkbox("Show Summary of Dataset"):
                 st.write(data.describe().T)
