@@ -114,10 +114,12 @@ def main():
 
         if st.checkbox("Model Perfomance With Grapichs"):
                     st.write("Recall Curve")
-                    st.image('image_45.PNG')
+                    image45 = Image.open('image_45.png')
+                    st.image(image45)
                     st.write('ROC Curve')
-                    st.image('image_46.PNG')
-
+#                     st.image('image_46.PNG')
+                    image46 = Image.open('image_46.png')
+                    st.image(image46)
         if st.checkbox("Feature İmportance"):
                     st.image('image_47.jpg')
 
