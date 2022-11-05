@@ -176,7 +176,8 @@ def main():
                 st.image("image_30.PNG")
 
         if st.checkbox("Yellow Brick"):
-                st.image("image_31.PNG")
+                image31 = Image.open('image_31.png')
+                st.image(image31)
 
         if st.checkbox("silhouette_score"):
                 st.image("image_32.PNG")
