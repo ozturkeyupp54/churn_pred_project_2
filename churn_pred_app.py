@@ -448,8 +448,9 @@ def main():
                 st.write(data.describe().T)
 
             if st.checkbox("Show mean all columns"):
-                image3 = Image.open('image_3.png')
-                st.image(image3)
+#                 image3 = Image.open('image_3.png')
+#                 st.image(image3)
+                  st.image("image_3.PNG")
                 
 
             if st.checkbox("num_pro_val_count"):
