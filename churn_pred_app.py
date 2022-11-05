@@ -459,8 +459,9 @@ def main():
                   st.image("image_4.PNG")
 
             if st.checkbox("time_spend_value_normalize"):
-                image5 = Image.open('image_5.png')
-                st.image(image5)
+#                 image5 = Image.open('image_5.png')
+#                 st.image(image5)
+                  st.image("image_5.PNG")
 
             if st.checkbox("barh_plot"):
                 image6 = Image.open('image_6.png')
