@@ -14,6 +14,7 @@ import seaborn as sns
 import tensorflow as tf
 from keras import Model
 from keras.models import load_model
+import joblib
 
 
 
@@ -234,10 +235,12 @@ def main():
                 
 
         if st.checkbox("Final Prediction for XGBoost"):
-            xgboost_m = 'pipe_model_pkl222'
+#             xgboost_m = 'pipe_model_pkl'
 #             xg_model = pickle.load(open(xgboost_m, "rb"))
-            xg_model = pickle.load(open('pipe_model_pkl222.pkl', "rb"))
+#             xg_model = pickle.load(open('pipe_model_pkl222.pkl', "rb"))
             # scaled_random= pickle.load(open("random_pipeline","rb"))
+            xgboost_m = 'pipe_model_pkl'
+            xgb_reg = joblib.load("pipe_model_pkl")
 
             st.sidebar.title("XGBOOST Model")
             # st.sidebar.header("Sidebar header")
@@ -258,7 +261,7 @@ def main():
             st.table(df_xg)
 
             if st.button("Predict_xg"):
-                predictions = xg_model.predict(df_xg)
+                predictions = xgb_reg.predict(df_xg)
 
                 df_xg["pred"] = predictions
 
