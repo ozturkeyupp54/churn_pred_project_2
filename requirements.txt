@@ -34,10 +34,6 @@ xgboost==1.7.0
 
 ################################################################
 
-PIL 
-codecs
-os
-seaborn
 
 ################################################################
 # TensorFlow v.2.1 and above include both CPU and GPU versions.
