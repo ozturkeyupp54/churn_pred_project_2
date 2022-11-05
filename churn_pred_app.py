@@ -235,14 +235,42 @@ def main():
                 
 
         if st.checkbox("Final Prediction for XGBoost"):
-            xgboost_m = 'pipe_model_pkl'
-            xg_model = pickle.load(open(xgboost_m, "rb"))
-#             xg_model = pickle.load(open('pipe_model_pkl222.pkl', "rb"))
-            # scaled_random= pickle.load(open("random_pipeline","rb"))
-            #xgboost_m = 'pipe_model_pkl'
-            #xgb_reg = joblib.load("pipe_model_pkl")
+#             xgboost_m = 'pipe_model_pkl'
+#             xg_model = pickle.load(open(xgboost_m, "rb"))
+# #             xg_model = pickle.load(open('pipe_model_pkl222.pkl', "rb"))
+#             # scaled_random= pickle.load(open("random_pipeline","rb"))
+#             #xgboost_m = 'pipe_model_pkl'
+#             #xgb_reg = joblib.load("pipe_model_pkl")
 
-            st.sidebar.title("XGBOOST Model")
+#             st.sidebar.title("XGBOOST Model")
+#             # st.sidebar.header("Sidebar header")
+#             sl=st.sidebar.slider(label='satisfaction_level',min_value=0.0,max_value=1.0,step=0.01,)
+#             le=st.sidebar.slider(label="last_evaluation:",min_value=0.0,max_value=1.0,step=0.01,)
+#             nump=st.sidebar.slider("number_project:",min_value=1,max_value=10,step=1,)
+#             amh=st.sidebar.slider("average_monthly_hours:",min_value=0,max_value=320,step=1,)
+#             tsc=st.sidebar.slider("time_spend_company:",min_value=0,max_value=12,step=1,)
+
+#             dict={"satisfaction_level":sl,
+#                 "last_evaluation":le,
+#                 "number_project":nump,
+#                 "average_montly_hours":amh,
+#                 "time_spend_company":tsc}
+
+#             df_xg= pd.DataFrame.from_dict([dict])
+
+#             st.table(df_xg)
+
+#             if st.button("Predict_xg"):
+#                 predictions = xg_model.predict(df_xg)
+
+#                 df_xg["pred"] = predictions
+
+#                 st.write(predictions[0])
+            filename = 'random_pickle_model'
+            model = pickle.load(open(filename, 'rb'))
+            # scaled_random= pickle.load(open("random_pipeline","rb"))
+
+            st.sidebar.title("Final Model ")
             # st.sidebar.header("Sidebar header")
             sl=st.sidebar.slider(label='satisfaction_level',min_value=0.0,max_value=1.0,step=0.01,)
             le=st.sidebar.slider(label="last_evaluation:",min_value=0.0,max_value=1.0,step=0.01,)
@@ -256,14 +284,14 @@ def main():
                 "average_montly_hours":amh,
                 "time_spend_company":tsc}
 
-            df_xg= pd.DataFrame.from_dict([dict])
+            df= pd.DataFrame.from_dict([dict])
 
-            st.table(df_xg)
+            st.table(df)
 
-            if st.button("Predict_xg"):
-                predictions = xg_model.predict(df_xg)
+            if st.button("Predict_Random"):
+                predictions = model.predict(df)
 
-                df_xg["pred"] = predictions
+                df["pred"] = predictions
 
                 st.write(predictions[0])
 
