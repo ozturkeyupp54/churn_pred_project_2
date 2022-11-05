@@ -169,7 +169,8 @@ def main():
                 st.write("0.14908358236837996")
 
         if st.checkbox("Elbow Method"):
-                st.image("image_29.PNG")
+               image29 = Image.open('image_29.png')
+                st.image(image29)
 
         if st.checkbox("X_diff"):
                 st.image("image_30.PNG")
