@@ -439,7 +439,7 @@ def main():
             st.subheader("Hazırlayanlar:")
             st.subheader("D1277 Gökhan")
             st.subheader("D1313 Ömer")
-            st.subheader("F1434 Resu")
+            st.subheader("F1434 Resul")
             st.subheader("F1577 Saul")
             st.subheader("F1419 Eyüp")
                
