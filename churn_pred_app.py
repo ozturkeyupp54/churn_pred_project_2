@@ -201,6 +201,18 @@ def main():
         if st.checkbox("Centroits of Clusters"):
                 image36 = Image.open('image_36.png')
                 st.image(image36)
+                
+        if st.checkbox("Prediction Over 10 Samples From Dataframe"):
+                st.image("image_77.PNG")
+
+        if st.checkbox("Distribution of Clusters - 2"):
+                st.image("image_78.PNG")
+
+        if st.checkbox("Centroits of Clusters - 2"):
+                st.image("image_79.PNG")
+
+        if st.checkbox("Results and Evaluation"):
+                st.image("image_80.PNG")
 
     elif choice == "XGBClassifier":
         st.write('# XGBClassifier')
