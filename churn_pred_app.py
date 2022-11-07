@@ -465,11 +465,11 @@ def main():
 
     else:
             st.subheader("Hazırlayanlar:")
-                st.subheader("D1277 Gökhan")
-                st.subheader("D1313 Ömer")
-                st.subheader("F1434 Resu")
-                st.subheader("F1577 Saul")
-                st.subheader("F1419 Eyüp")
+            st.subheader("D1277 Gökhan")
+            st.subheader("D1313 Ömer")
+            st.subheader("F1434 Resu")
+            st.subheader("F1577 Saul")
+            st.subheader("F1419 Eyüp")
                
             st.subheader("EDA")
             st.write("## Zemin güzel, hava güzel, tahmin yürütmek için her şey müsait")
