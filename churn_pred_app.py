@@ -206,7 +206,8 @@ def main():
                 st.image("image_77.PNG")
 
         if st.checkbox("Distribution of Clusters - 2"):
-                st.image("image_78.PNG")
+                image78 = Image.open('image_78.png')
+                st.image(image78)
 
         if st.checkbox("Centroits of Clusters - 2"):
                 st.image("image_79.PNG")
