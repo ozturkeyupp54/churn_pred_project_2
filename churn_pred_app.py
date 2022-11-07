@@ -343,7 +343,7 @@ def main():
 
 
         if st.checkbox("Final Prediction for KNN"):
-            KNN_m = 'pipe_model_pkl_knn'
+            KNN_m = 'knn_pipe_model'
             KNN_model = pickle.load(open(KNN_m, 'rb'))
             # scaled_random= pickle.load(open("random_pipeline","rb"))
 
