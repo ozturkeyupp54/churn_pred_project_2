@@ -437,17 +437,16 @@ def main():
 
     else:
             st.subheader("Hazırlayanlar:")
-            st.subheader("D1277 Gökhan")
-            st.subheader("D1313 Ömer")
-            st.subheader("F1434 Resul")
-            st.subheader("F1577 Saul")
-            st.subheader("F1419 Eyüp")
-               
-            st.subheader("EDA")
+            st.write("D1277 Gökhan")
+            st.write("D1313 Ömer")
+            st.write("F1434 Resul")
+            st.write("F1577 Saul")
+            st.write("F1419 Eyüp")
+            st.subheader("-------------------------")
+            st.subheader("EDA Study")
+            st.write("'Eda kimmm??!!'")
+            st.write(" :) ")
             st.write("## Zemin güzel, hava güzel, tahmin yürütmek için her şey müsait")
-
-            # st.code("import pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nimport warnings\nfrom sklearn.metrics import classification_report\nconfusion_matrix\nfrom sklearn.metrics import roc_auc_score, roc_curve, precision_recall_curve, average_precision_score\nfrom sklearn.model_selection import cross_val_score, cross_validate\nfrom sklearn.model_selection import GridSearchCV")
-            # st.code("import tensorflow as tf\nfrom keras.models import Sequential\nfrom keras.layers import Dense, Activation, Dropout\nfrom keras.callbacks import EarlyStopping\nfrom keras.optimizers import Adam")
 
             st.write("# HR - Employee Churn Prediction")
             st.image("image_1.jpg")
