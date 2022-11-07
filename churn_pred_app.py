@@ -249,9 +249,9 @@ def main():
                 
 
         if st.checkbox("Final Prediction for XGBoost"):
-#             xgboost_m = 'pipe_model_pkl'
+#             xgboost_m = 'pipe_model_pkl222'
             #xg_model = pickle.load(open(pipe_model_pkl, "rb"))
-            xg_model = pickle.load(open('pipe_model_pkl222.pkl', "rb"))
+            xg_model = pickle.load(open('pipe_model_pkl222', "rb"))
             # scaled_random= pickle.load(open("random_pipeline","rb"))
             #xgboost_m = 'pipe_model_pkl'
             #xgb_reg = joblib.load("pipe_model_pkl")
