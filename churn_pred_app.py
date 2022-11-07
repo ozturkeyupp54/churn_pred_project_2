@@ -441,6 +441,7 @@ def main():
             st.write("D1313 Ömer")
             st.write("F1434 Resul")
             st.write("F1577 Saul")
+            st.write("F1311 Yakup")
             st.write("F1419 Eyüp")
             st.subheader("-------------------------")
             st.subheader("EDA Study")
