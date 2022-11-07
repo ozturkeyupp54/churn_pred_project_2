@@ -24,8 +24,8 @@ from tempfile import NamedTemporaryFile
 
 st.set_option('deprecation.showfileUploaderEncoding', False)
 
-buffer = st.file_uploader("Image here pl0x")
-temp_file = NamedTemporaryFile(delete=False)
+# buffer = st.file_uploader("Image here pl0x")
+# temp_file = NamedTemporaryFile(delete=False)
 
 def st_display_sweetviz(report_html,width=1000,height=500):
         report_file = codecs.open(report_html,'r')
